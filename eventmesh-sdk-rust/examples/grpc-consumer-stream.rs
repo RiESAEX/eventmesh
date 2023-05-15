@@ -53,14 +53,15 @@ async fn main() -> Result<()> {
         consumer_group: "EventMeshTest-consumerGroup".to_string(),
     })
     .await?;
+    info!("56!");
     let item = vec![SubscriptionItem {
         topic: String::from("TEST-TOPIC-GRPC-BROADCAST"),
         mode: SubscriptionMode::Broadcasting.into(),
         r#type: SubscriptionType::Sync.into(),
     }];
     let mut stream = consumer.subscribe_stream(&item).await.unwrap().unwrap();
-    let item2 = item.clone();
-
+    let item2: Vec<_> = item.clone();
+    info!("64!");
     select! {
         _ = signal::ctrl_c() => {
             info!("shutting down");

@@ -123,7 +123,7 @@ pub struct EventMeshMessageConsumer {
     default_header: RequestHeader,
     // producer_group: String,
     consumer_group: String,
-    producer_group:String,
+    producer_group: String,
     subscription_map: Arc<Mutex<HashMap<String, String>>>,
     sender: Option<Sender<Subscription>>,
 }

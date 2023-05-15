@@ -18,3 +18,12 @@
 [workspace]
 members = ["eventmesh", "examples"]
 resolver = "2"
+
+[workspace.package]
+authors = ["Eventmesh contributors"]
+description = "rust sdk for Eventmesh"
+edition = "2021"
+homepage = "https://github.com/apache/eventmesh/tree/master/eventmesh-sdk-rust"
+keywords = ["Eventmesh"]
+license = "MIT"
+repository = "https://github.com/apache/eventmesh/tree/master/eventmesh-sdk-rust"
